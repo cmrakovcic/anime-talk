@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.create(username: "abc123", email: "abc123@aol.com", password: "hello")
+
+animes = Anime.create(title: "Naruto")
+animes = Anime.create(title: "One Piece")
+animes = Anime.create(title: "Dragon Ball Z")
+
+comment = Comment.create(user_id: 1, anime_id: 1, content: "This is the first anime I have watched")
