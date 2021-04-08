@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "sessions#home"
 
+  get '/animes' => 'animes#index'
+
   resources :animes do
     resources :comments
   end
