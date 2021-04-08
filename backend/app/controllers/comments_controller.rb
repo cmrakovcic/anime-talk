@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+    before_action :redirect_if_not_logged_in
+    before_action :set_comment, only: [:show, :edit, :update]
+    before_action :redirect_if_not_comment_author, only: [:edit, :update]
 
     def index
         if params[:anime_id] && @anime.find_by_id(params[:anime_id])
