@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   get '/animes' => 'animes#index'
 
+  get '/signup' => 'users#new'
+  post '/signup' => 'users#create'
+
   resources :animes do
     resources :comments
   end
