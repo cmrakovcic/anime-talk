@@ -2,6 +2,7 @@ class AnimesController < ApplicationController
 
     def index
         @animes = Anime.all.includes(:comments)
+        @animes = Anime.alpha
     end
 
     def show
