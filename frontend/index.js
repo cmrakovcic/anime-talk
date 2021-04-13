@@ -33,6 +33,7 @@ const app = {
     },
     poppin: function(ev){
         console.log(location.hash, 'popstate event');
+        let hash = location.hash.replace('#' ,'');
     }
 }
 
