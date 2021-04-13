@@ -19,6 +19,7 @@ const app = {
         let currentPage = ev.target.getAttribute('data-target');
         document.querySelector('.active').classList.remove('active');
         document.getElementById(currentPage).classList.add('active');
+        console.log(currentPage)
         history.pushState({}, currentPage, `#${currentPage}`);
     },
     pageShown: function(ev){
