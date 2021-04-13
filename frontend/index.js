@@ -3,6 +3,10 @@ const app = {
     show: new Event('show'),
     init: function(){
         app.pages = document.querySelectorAll('.page');
+
+        document.querySelectorAll('nav-link').forEach((link)=>{
+            link.addEventListener('click', app.nav);
+        })
     },
     nav: function(ev){
         ev.preventDefault();
