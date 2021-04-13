@@ -7,7 +7,7 @@ const app = {
             pg.addEventListener('show', app.pageShown);
         })
 
-        document.querySelectorAll('nav-link').forEach((link)=>{
+        document.querySelectorAll('.nav-link').forEach((link)=>{
             link.addEventListener('click', app.nav);
         })
 
