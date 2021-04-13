@@ -10,6 +10,8 @@ const app = {
         document.querySelectorAll('nav-link').forEach((link)=>{
             link.addEventListener('click', app.nav);
         })
+
+        history.replaceState({}, 'Home', '#home');
     },
     nav: function(ev){
         ev.preventDefault();
