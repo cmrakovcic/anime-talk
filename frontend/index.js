@@ -12,6 +12,7 @@ const app = {
         })
 
         history.replaceState({}, 'Home', '#home');
+        window.addEventListener('popstate', app.poppin);
     },
     nav: function(ev){
         ev.preventDefault();
@@ -19,6 +20,7 @@ const app = {
     pageShown: function(ev){
     },
     poppin: function(ev){
+        console.log(location.hash, 'popstate event');
     }
 }
 
