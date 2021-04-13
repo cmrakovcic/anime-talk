@@ -21,6 +21,7 @@ const app = {
         document.getElementById(currentPage).classList.add('active');
         console.log(currentPage)
         history.pushState({}, currentPage, `#${currentPage}`);
+        document.getElementById(currentPage).dispatchEvent(app.show);
     },
     pageShown: function(ev){
     },
