@@ -34,6 +34,10 @@ const app = {
     poppin: function(ev){
         console.log(location.hash, 'popstate event');
         let hash = location.hash.replace('#' ,'');
+        document.querySelector('.active').classList.remove('active');
+        document.getElementById(hash).classList.add('active');
+        console.log(hash)
+        document.getElementById(currentPage).dispatchEvent(app.show);
     }
 }
 
