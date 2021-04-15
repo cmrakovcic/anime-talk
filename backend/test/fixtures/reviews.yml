@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  creator: MyString
+  body: MyString
+  reviewer: MyString
+  anime: one
 
 two:
-  title: MyString
-  creator: MyString
+  body: MyString
+  reviewer: MyString
+  anime: two

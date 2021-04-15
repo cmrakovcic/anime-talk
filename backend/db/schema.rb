@@ -14,28 +14,19 @@ ActiveRecord::Schema.define(version: 2021_04_05_175953) do
 
   create_table "animes", force: :cascade do |t|
     t.string "title"
+    t.string "creator"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.string "content"
-    t.integer "user_id"
+  create_table "reviews", force: :cascade do |t|
+    t.text "body"
+    t.string "reviewer"
     t.integer "anime_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["anime_id"], name: "index_comments_on_anime_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
+    t.index ["anime_id"], name: "index_reviews_on_anime_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  add_foreign_key "comments", "animes"
-  add_foreign_key "comments", "users"
+  add_foreign_key "reviews", "animes"
 end

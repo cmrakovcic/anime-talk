@@ -1,5 +1,3 @@
 class Anime < ApplicationRecord
-    has_many :comments
-
-    scope :alpha, -> { order(:title) }
+    has_many :reviews, :dependent => :destroy
 end
