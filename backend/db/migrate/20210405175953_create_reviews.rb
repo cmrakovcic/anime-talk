@@ -4,6 +4,7 @@ class CreateReviews < ActiveRecord::Migration[6.1]
       t.text :body
       t.string :reviewer
       t.references :anime, foreign_key: true
+      t.references :user, foreign_key: true
 
       t.timestamps
     end
