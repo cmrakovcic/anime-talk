@@ -9,18 +9,12 @@ Anime.destroy_all
 Anime.reset_pk_sequence
 Review.destroy_all
 Review.reset_pk_sequence
-User.destroy_all
-User.reset_pk_sequence
 
 
-# a1 = Anime.create(title: "Naruto", creator: "Masashi Kishimoto", user_id: 1)
-# a2 = Anime.create(title: "One Piece", creator: "Eiichiro Oda", user_id: 2)
-# a3 = Anime.create(title: "Dragon Ball Z", creator: "Akira Toriyama", user_id: 3)
+a1 = Anime.create(title: "Naruto", creator: "Masashi Kishimoto")
+a2 = Anime.create(title: "One Piece", creator: "Eiichiro Oda")
+a3 = Anime.create(title: "Dragon Ball Z", creator: "Akira Toriyama")
 
-# r1 = Review.create(body: "I love this anime, was my first ever!", reviewer: "Chris", anime_id: 1, user_id: 1)
-# r2 = Review.create(body: "Everyone says this is too long to watch, but I loved it", reviewer: "Tom", anime_id: 2, user_id: 2)
-# r3 = Review.create(body: "Excellent fight scenes", reviewer: "Max", anime_id: 3, user_id: 3)
-
-u1 = User.create(username: "cmrak", email: "cmrakovcic@aol.com", password: "cm012397")
-u2 = User.create(username: "mattmrak", email: "mattmrakovcic@aol.com", password: "mm122195")
-u3 = User.create(username: "bmrak", email: "bmrak@aol.com", password: "bm100599")
+r1 = Review.create(body: "I love this anime, was my first ever! -Chris", reviewer: "Chris", anime_id: 1)
+r2 = Review.create(body: "Everyone says this is too long to watch, but I loved it. -Matt", reviewer: "Matt", anime_id: 2)
+r3 = Review.create(body: "Excellent fight scenes! -Max", reviewer: "Max", anime_id: 3)
