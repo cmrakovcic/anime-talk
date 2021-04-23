@@ -58,14 +58,14 @@ button:hover{
 }
 
   .anime-title{
-    font-size: 30px;
+    font-size: 28px;
     padding-bottom: 8px;
     margin: 0px;
     text-align: center;
   }
 
   .anime-creator{
-    font-size: 20px;
+    font-size: 18px;
     margin: 0px;
     text-align: center;
     font-weight: lighter;
@@ -84,7 +84,7 @@ button:hover{
 .review-header{
   font-size: 20px;
   padding-bottom: 8px;
-  margin: 0px;
+  margin: 5px;
   text-align: center;
 }
 
@@ -116,7 +116,9 @@ button:hover{
     position: fixed;
     bottom: 0;
     right: 15px;
-    border: 3px solid #f1f1f1;
+    border: 5px solid white;
+    background-color: midnightblue;
+    color: whitesmoke;
     z-index: 9;
     width:550px;
     height:250px;
