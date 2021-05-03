@@ -11,23 +11,6 @@ class ReviewsController < ApplicationController
     render json: @review, status: 200
   end
 
-  # def show
-  #   render json: @review, status: 200
-  # end
-
-  # def update
-  #   @review.update(review_params)
-  #   if @review.save
-  #     render json: @review, status: 200
-  #   else
-  #     render json: { errors: @review.errors.full_messages }, status: 422
-  #   end
-  # end
-
-  # def destroy
-  #   @review.destroy
-  # end
-
   private
 
   def review_params

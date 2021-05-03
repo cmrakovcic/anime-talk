@@ -9,12 +9,3 @@ Anime.destroy_all
 Anime.reset_pk_sequence
 Review.destroy_all
 Review.reset_pk_sequence
-
-
-a1 = Anime.create(title: "Naruto", creator: "Masashi Kishimoto")
-a2 = Anime.create(title: "One Piece", creator: "Eiichiro Oda")
-a3 = Anime.create(title: "Dragon Ball Z", creator: "Akira Toriyama")
-
-r1 = Review.create(body: "I love this anime, was my first ever! -Chris", anime_id: 1)
-r2 = Review.create(body: "Everyone says this is too long to watch, but I loved it. -Matt", anime_id: 2)
-r3 = Review.create(body: "Excellent fight scenes! -Max", anime_id: 3)

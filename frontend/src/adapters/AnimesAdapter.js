@@ -3,25 +3,29 @@ class AnimesAdapter{
     this.baseUrl = 'http://localhost:3000/animes'
   }
 
-  getAnimes() {
-    return fetch(this.baseUrl).then(res => res.json())
+  async getAnimes() {
+    const res = await fetch(this.baseUrl);
+    return await res.json();
   }
 
-  createAnime(titleValue, creatorValue) {
+  async createAnime(titleValue, creatorValue) {
     const anime = {
       title: titleValue,
       creator: creatorValue,
 
     };
-    return fetch(this.baseUrl, {
-      method: 'POST',
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify(anime)
-    })
-    .then(res => (res.json()))
-    .catch(error => console.log("Error: " + error))
+    try {
+      const res = await fetch(this.baseUrl, {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(anime)
+      });
+      return await (res.json());
+    } catch (error) {
+      return console.log("Error: " + error);
+    }
   }
 }

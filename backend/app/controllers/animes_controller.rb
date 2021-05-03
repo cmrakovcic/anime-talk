@@ -15,18 +15,8 @@ class AnimesController < ApplicationController
     render json: @anime, status: 200
   end
 
-  # def update
-  #   @anime.update(anime_params)
-  #   if @anime.save
-  #     render json: @anime, status: 200
-  #   else
-  #     render json: { errors: @anime.errors.full_messages }, status: 422
-  #   end
-  # end
-
   def destroy
     @anime.destroy
-    # render json: {animeId: @anime.id}
   end
 
   private
