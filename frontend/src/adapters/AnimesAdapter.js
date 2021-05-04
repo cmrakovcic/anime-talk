@@ -12,7 +12,6 @@ class AnimesAdapter{
     const anime = {
       title: titleValue,
       creator: creatorValue,
-
     };
     try {
       const res = await fetch(this.baseUrl, {
