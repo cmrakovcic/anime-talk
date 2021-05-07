@@ -1,9 +1,9 @@
 class Anime {
-  constructor(animeJSON) {
-    this.id = animeJSON.id
-    this.title = animeJSON.title
-    this.creator = animeJSON.creator
-    this.reviews = animeJSON.reviews
+  constructor(anime) {
+    this.id = anime.id
+    this.title = anime.title
+    this.creator = anime.creator
+    this.reviews = anime.reviews
   }
   
   renderAnimeBlock() {
