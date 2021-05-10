@@ -65,7 +65,7 @@ class Anime {
   }
 
   deleteAnime(id){
-    return fetch('http://localhost:3000/animes' + '/' + id, {
+    fetch('http://localhost:3000/animes' + '/' + id, {
     method: 'DELETE',
     headers: {
       "Content-Type": "application/json",
