@@ -76,7 +76,7 @@ class Anime {
 
   getAndFormatNewReviewForm(event){
     event.preventDefault();
-    const submitButton = document.createElement("button") // build the add review button
+    const submitButton = document.createElement("button")
     submitButton.innerHTML = "Add"
     submitButton.id = "review-submit"
     submitButton.type = "submit"

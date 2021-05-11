@@ -11,11 +11,10 @@ class Animes {
     this.newAnimeTitle = document.getElementById('new-anime-title')
     this.newAnimeCreator = document.getElementById('new-anime-creator')
     this.newAnimeForm.addEventListener('submit', this.createAnime.bind(this))
-    //anytime the anime is submitted, bind the Animes class/object as this - otherwise the this will be the form itself
   }
 
   createAnime(event) {
-    event.preventDefault(); //pass in event object & prevents the default of page refresh on form submit
+    event.preventDefault();
     const titleValue = this.newAnimeTitle.value;
     const creatorValue = this.newAnimeCreator.value
 
