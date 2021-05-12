@@ -108,7 +108,7 @@ class Anime {
     })
     .then(res => res.json())
       .then(review => {
-      pDiv.innerHTML = review.body
+      pDiv.innerText = review.body
       newReviewBody.value = ' '
       buttonDiv.removeChild(submitButton)
       closeForm()

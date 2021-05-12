@@ -32,6 +32,8 @@ class Animes {
     this.adapter
       .getAnimes()
       .then(animes => {
+        //this.adapter.renderNewAnimes(animes)
+        //console.log(this.adapter.renderNewAnimes(animes))
       animes.forEach(anime => this.animes.push(new Anime(anime)))
       this.renderAnimes()
       }) 

@@ -8,6 +8,10 @@ class AnimesAdapter{
     return await res.json();
   }
 
+  renderNewAnimes(array) {
+    return array.filter(anime => anime.title[0] === "A")
+  }
+
   async createAnime(titleValue, creatorValue) {
     const anime = {
       title: titleValue,
